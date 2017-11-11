@@ -4,15 +4,6 @@ var Entries = require("./models/Entries");
 
 // Get all entries
 router.get("/question", (req, res) => {
-    // var offset = 0;
-    // var limit = 10;
-    //
-    // if(req.params.offest && req.params.offset!=null)
-    //     offset = req.params.offset;
-    //
-    // if(req.params.limit && req.params.limit!=null)
-    //     limit = req.params.limit;
-
     Entries.findAll().then(entries => res.json(entries));
 });
 
