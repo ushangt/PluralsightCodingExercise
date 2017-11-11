@@ -10,7 +10,7 @@
 
 **1. Install dependencies:**
 
-Make sure you have `Node JS` and `npm` installed. 
+Make sure you have `Node JS` and `npm` installed. If you want to re-create the DB you will also need `Ruby` installed.
 After that open Terminal at the project folder and hit `npm install`
 
 **2. Load the Database:**
