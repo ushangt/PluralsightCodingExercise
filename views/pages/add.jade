@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1 Add Question
+    if flash
+        div(class="alert.alert-#{flash.role}",role='alert') #{flash.message}
+    form(method='POST' action='/add/question')
+        .form-group
+            label.bmd-label-floating(for='question') Enter a Question
+            input.form-control#question(type='text', name='question', required='')
+        .form-group
+            label.bmd-label-floating(for='answer') Enter Answer
+            input.form-control#answer(type='text', name='answer', required='')
+        .form-group
+            label.bmd-label-floating(for='distractors') Enter Distractors (if any)
+            input.form-control#distractors(type='text', name='distractors')
+        .form-group
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit

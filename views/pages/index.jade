@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    h1 Questions List
+    h6 Click an id to edit the question
+    table#question_list.table(cellspacing='0', width='100%')
+        thead
+            tr
+                th #
+                th Question
+                th Answer
+                th Distractors
+        tbody
+            each question in questions
+                tr
+                    td
+                        a(href="/edit/#{question.id}") #{question.id}
+                    td #{question.question}
+                    td #{question.answer}
+                    td #{question.distractors}
+
+    script.
+        $(document).ready(function () {
+            $('#question_list').DataTable();
+        });
